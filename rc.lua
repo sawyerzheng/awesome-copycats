@@ -549,7 +549,7 @@ globalkeys = mytable.join(
     -- Prompt
     -- awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
     --           {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, 'r', function () awful.spawn('rofi -show drun') end,
+    awful.key({ modkey }, 'r', function () awful.spawn('rofi -icon-theme "Papirus" -show-icons -show drun') end,
        {description='run rofi', group='launcher'}),
     awful.key({ modkey }, "x",
               function ()
