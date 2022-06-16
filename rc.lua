@@ -829,3 +829,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("picom --config  $HOME/.config/picom/picom.conf")
 awful.spawn.with_shell('sh -c "(sleep 10 && exec /opt/nutstore/bin/nutstore-pydaemon.py)"')
 awful.spawn.with_shell('"/home/sawyer/programs/nextcloud" --background')
+awful.spawn.with_shell('ibus-daemon -d')
