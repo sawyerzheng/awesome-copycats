@@ -302,7 +302,7 @@ globalkeys = mytable.join(
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey, altkey,           }, "k",
+    awful.key({ modkey, altkey,           }, "l",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -310,19 +310,19 @@ globalkeys = mytable.join(
     ),
 
     -- By-direction client focus
-    awful.key({ modkey }, "j",
+    awful.key({ modkey }, "k",
         function()
             awful.client.focus.global_bydirection("down")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus down", group = "client"}),
-    awful.key({ modkey }, "k",
+    awful.key({ modkey }, "i",
         function()
             awful.client.focus.global_bydirection("up")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus up", group = "client"}),
-    awful.key({ modkey }, "h",
+    awful.key({ modkey }, "j",
         function()
             awful.client.focus.global_bydirection("left")
             if client.focus then client.focus:raise() end
@@ -342,11 +342,11 @@ globalkeys = mytable.join(
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
+    awful.key({ modkey, "Control" }, "l", function () awful.screen.focus_relative(-1) end,
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
